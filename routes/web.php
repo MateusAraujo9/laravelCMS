@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', 'Site\HomeController@index');
+
+Route::prefix('painel')->group(function(){
+    Route::get('/', 'Admin\HomeController@index')->name('admin');
+    Route::get('login', 'Admin\Auth\LoginController@index')->name('login');
 });
