@@ -1,1 +1,1 @@
-Página inicial
+<a href="{{route('admin')}}">[ DADSHBOARD ]</a>

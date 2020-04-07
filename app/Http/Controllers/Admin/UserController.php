@@ -112,6 +112,11 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $user = User::find($id);
+        if($user){
+            
+        }
+
         $data = $request->only([
             'name',
             'email',
@@ -130,7 +135,7 @@ class UserController extends Controller
             ->withInput();
         }
 
-        $user = User::find($id);
+        
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->data_nascimento = $data['data_nascimento'];

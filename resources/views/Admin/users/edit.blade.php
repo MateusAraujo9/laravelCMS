@@ -3,7 +3,7 @@
 @section('title', 'Editar Usuário')
 
 @section('content_header')
-    <h1>Editar Usuário</h1>
+    <h1 style="float: left;">Editar Usuário</h1> <a href="{{route('users.index')}}" class="btn btn-sm btn-dark" style="float: right;">VOLTAR</a><br>
 @endsection
 
 @section('content')
